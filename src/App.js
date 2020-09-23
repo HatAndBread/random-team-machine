@@ -12,6 +12,7 @@ function App() {
   const [randomPeopleDisplay, setRandomPeopleDisplay] = useState(false);
   const [randomPerson, setRandomPerson] = useState(null);
   const [lastList, setLastList] = useState(null);
+  const [membersPerTeam, setMembersPerTeam] = useState(1);
   const teamBoxes = [];
   for (let i = 0; i < teams.length; i++) {
     teamBoxes.push(<TeamDisplayBox key={i.toString()} team={teams[i]} />);
@@ -30,6 +31,8 @@ function App() {
           setRandomPerson={setRandomPerson}
           lastList={lastList}
           setLastList={setLastList}
+          membersPerTeam={membersPerTeam}
+          setMembersPerTeam={setMembersPerTeam}
         />
       )}
       {randomPeopleDisplay && (

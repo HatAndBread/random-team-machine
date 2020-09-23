@@ -12,7 +12,6 @@ export let randomPersonGenerator;
 
 export function TeamMembersInput(props) {
   const [groupArr, setGroupArr] = useState([]);
-  const [membersPerTeam, setMembersPerTeam] = useState(1);
   const [droppedText, setDroppedText] = useState(null);
   const handleChange = (e) => {
     const reg = /\n|,/;
@@ -31,9 +30,9 @@ export function TeamMembersInput(props) {
     let teams = [];
     const randomize = randumb(arr);
     const randomizedGroup = randomize(true);
-    let modulo = groupArr.length % membersPerTeam;
-    for (let i = 0; i < Math.floor(groupArr.length / membersPerTeam); i++) {
-      let members = randomizedGroup.splice(0, membersPerTeam);
+    let modulo = groupArr.length % props.membersPerTeam;
+    for (let i = 0; i < Math.floor(groupArr.length / props.membersPerTeam); i++) {
+      let members = randomizedGroup.splice(0, props.membersPerTeam);
       if (modulo > 0) {
         members.push(randomizedGroup.splice(0, 1)[0]);
         modulo -= 1;
@@ -135,7 +134,11 @@ export function TeamMembersInput(props) {
           <SaveText text={groupArr} />
           <RandomPerson handleClick={handleRandomPersonClick} />
           <SubmitButton text="✨MAKE RANDOM TEAMS✨" handleClick={handleClick} />
-          <NumberSelect options={new Array(getNum(groupArr.length))} setMembersPerTeam={setMembersPerTeam} />
+          <NumberSelect
+            options={new Array(getNum(groupArr.length))}
+            membersPerTeam={props.membersPerTeam}
+            setMembersPerTeam={props.setMembersPerTeam}
+          />
         </div>
       </div>
     </div>

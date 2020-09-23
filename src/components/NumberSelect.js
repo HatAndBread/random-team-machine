@@ -6,7 +6,11 @@ export default function NumberSelect(props) {
     props.options[i] = i + 1;
   }
   let options = props.options.map((num) => {
-    return <option key={num.toString()}>{num}</option>;
+    return (
+      <option key={num.toString()} value={num}>
+        {num}
+      </option>
+    );
   });
   const handleChange = (e) => {
     props.setMembersPerTeam(e.target.value);
@@ -16,7 +20,7 @@ export default function NumberSelect(props) {
       <label htmlFor="member-num" className={styles.label}>
         Minimum members per team:
       </label>
-      <select name="member-num" onChange={handleChange}>
+      <select name="member-num" onChange={handleChange} value={props.membersPerTeam}>
         {options}
       </select>
     </div>
