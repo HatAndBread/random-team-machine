@@ -1,0 +1,27 @@
+.Nav {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: #312f2f;
+  width: 100vw;
+  height: 5vw;
+  text-align: center;
+  color: #f6e8ea;
+}
+
+.butt {
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  color: #f6e8ea;
+}
+
+.butt:hover {
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0;
+  font-size: 4vw;
+}

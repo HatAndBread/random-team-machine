@@ -1,0 +1,8 @@
+.teamBoxesScreen {
+  position: fixed;
+  top: 5vw;
+  height: 90vh;
+  width: 100vw;
+  overflow: scroll;
+  left: 0;
+}

@@ -1,0 +1,12 @@
+.randomPerson {
+  margin-top: 20vh;
+  font-size: 140px;
+  color: #f6e8ea;
+  background-color: #312f2f;
+  border-radius: 10px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}

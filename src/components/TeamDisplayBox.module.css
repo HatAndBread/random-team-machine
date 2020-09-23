@@ -1,0 +1,23 @@
+.teambox {
+  background-color: #ef626c;
+  color: #312f2f;
+  border-radius: 10px;
+  display: inline-flex;
+  margin: 10px;
+  font-weight: 900;
+}
+
+h2 {
+  color: #312f2f;
+  background-color: #f6e8ea;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+}

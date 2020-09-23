@@ -1,0 +1,54 @@
+.input {
+  width: 50vw;
+  height: 75vh;
+  border-radius: 10px;
+}
+
+.mainInput {
+  position: relative;
+  top: 5vw;
+  overflow-y: scroll;
+}
+
+.topPart {
+  display: flex;
+  padding: 10px;
+}
+
+.rightPart {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin-top: 0px;
+  margin-left: 10px;
+  color: #312f2f;
+  font-size: 22px;
+  width: 45vw;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 750px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: 12px;
+    width: 36vw;
+  }
+}
+
+@media only screen and (max-height: 550px) {
+  p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-height: 400px) {
+  .input {
+    height: 70vh;
+  }
+}

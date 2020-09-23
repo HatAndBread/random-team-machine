@@ -1,0 +1,12 @@
+.ranButt {
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .ranButt {
+    width: 210px;
+  }
+}
