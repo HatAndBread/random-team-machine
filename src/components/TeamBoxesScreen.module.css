@@ -6,3 +6,9 @@
   overflow: scroll;
   left: 0;
 }
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

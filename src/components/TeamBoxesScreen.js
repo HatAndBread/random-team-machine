@@ -5,8 +5,10 @@ import styles from './TeamBoxesScreen.module.css';
 export default function TeamBoxesScreen(props) {
   return (
     <div className={styles.teamBoxesScreen}>
-      <div>{props.teamBoxes}</div>
-      <BackButton handleClick={props.goBack} />
+      <div className={styles.boxes}>
+        {props.teamBoxes}
+        <BackButton handleClick={props.goBack} />
+      </div>
     </div>
   );
 }
